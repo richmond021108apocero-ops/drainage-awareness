@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drainage Awareness - Parañaque City</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #0077b6, #90e0ef);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .container {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #0077b6;
+        }
+
+        button {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #023e8a;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .quiz-option {
+            display: block;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Drainage Awareness Program</h1>
+    <h2>Parañaque City</h2>
+    <p>Working Together for a Flood-Free Community</p>
+</header>
+
+<div class="container">
+    <h2>About the Issue</h2>
+    <p>
+        Parañaque City experiences flooding especially during heavy rains.
+        Many drainage systems become clogged due to waste and lack of maintenance.
+        This causes inconvenience, property damage, and health risks to residents.
+    </p>
+</div>
+
+<div class="container">
+    <h2>Causes</h2>
+    <button onclick="toggleSection('causes')">Show Causes</button>
+    <ul id="causes" class="hidden">
+        <li>Improper garbage disposal in streets and canals</li>
+        <li>Plastic waste blocking drainage systems</li>
+        <li>Insufficient drainage maintenance</li>
+        <li>Rapid urbanization and construction</li>
+    </ul>
+</div>
+
+<div class="container">
+    <h2>Effects</h2>
+    <button onclick="toggleSection('effects')">Show Effects</button>
+    <ul id="effects" class="hidden">
+        <li>Flooding in low-lying barangays</li>
+        <li>Spread of water-borne diseases</li>
+        <li>Traffic congestion during rainfall</li>
+        <li>Damage to homes and businesses</li>
+    </ul>
+</div>
+
+<div class="container">
+    <h2>Implementations & Solutions</h2>
+    <button onclick="toggleSection('solutions')">Show Solutions</button>
+    <ul id="solutions" class="hidden">
+        <li>Regular community clean-up drives</li>
+        <li>Strict enforcement of waste segregation</li>
+        <li>Improvement of drainage infrastructure</li>
+        <li>Public awareness campaigns in barangays</li>
+        <li>Encouraging residents to report clogged canals</li>
+    </ul>
+</div>
+
+<div class="container">
+    <h2>Quick Awareness Quiz</h2>
+    <p>What is the main cause of clogged drainage in Parañaque?</p>
+
+    <button class="quiz-option" onclick="checkAnswer(false)">A. Clean rivers</button>
+    <button class="quiz-option" onclick="checkAnswer(true)">B. Improper garbage disposal</button>
+    <button class="quiz-option" onclick="checkAnswer(false)">C. Planting trees</button>
+
+    <p id="quiz-result"></p>
+</div>
+
+<footer>
+    Presented by: John Michael Catana
+</footer>
+
+<script>
+
+    function toggleSection(id) {
+        var section = document.getElementById(id);
+        section.classList.toggle("hidden");
+    }
+
+    function checkAnswer(correct) {
+        var result = document.getElementById("quiz-result");
+        if (correct) {
+            result.innerHTML = "Correct! Proper waste disposal helps prevent flooding.";
+            result.style.color = "green";
+        } else {
+            result.innerHTML = "Incorrect. Think about what blocks drainage systems.";
+            result.style.color = "red";
+        }
+    }
+
+</script>
+
+</body>
+</html>
